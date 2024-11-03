@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{% include "composants/nav.html.twig" %}
+
+	<h1 class="my-5">Accueil</h1>
+
+	{% if app.user %}
+		<div class="mb-3"> You are logged in as {{ app.user.userIdentifier }},
+			<a href="{{ path('app_logout') }}">Logout</a>
+		</div>
+	</div>
+	{% else %}
+	<div class="mb-3">
+		Vous êtes connectés en tant qu'invité
+	</div>
+	{% endif %}
+		
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création d'un Article{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% include "composants/nav.html.twig" %}
+    <h1 class="my-5">Créer un article</h1>    
+
+    {{form(form)}}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Articles
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{% include "composants/nav.html.twig" %}
+		<h1 class="mt-5">Nos Articles</h1>
+		{% include "composants/flash.html.twig" %}
+		<a href="{{ path('app_article_create') }}" class="btn btn-primary mb-5">Créér</a>
+
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Titre</th>
+					<th scope="col">Categorie</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for article in articles %}
+					<tr>
+						<td scope="row">
+							<a href="{{ path('app_article_details', {id:article.id}) }}">
+								{{article.title}}
+							</a>
+						</td>
+						<td>{{ article.category.name }}</td>
+						<td>
+							<a href="{{ path('app_article_edit', {id: article.id}) }}" class="btn btn-primary">Edit</a>
+							<a href="{{ path('app_article_delete', {id: article.id}) }}" class="btn btn-danger">Supprimer</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+{% endblock %}
+

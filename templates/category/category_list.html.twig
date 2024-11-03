@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Catégories
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{% include "composants/nav.html.twig" %}
+		<h1 class="my-5">Nos Categories</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nom</th>
+					<th scope="col">Articles</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for category in categories %}
+					<tr>
+						<td scope="row">{{category.name}}</td>
+						<td>{{ category.articles.count }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+{% endblock %}
+

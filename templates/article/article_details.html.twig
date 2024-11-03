@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% include "composants/nav.html.twig" %}
+    <h1 class="my-5">{{article.title}}</h1>    
+    <p>{{ article.description }}</p>
+
+    {% if article.image %}
+        <img src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="">
+    {% endif %}
+    
+
+</div>
+
+{% endblock %}
