@@ -72,14 +72,14 @@ Lors de la création des entités :
 
 #### 2. Enregistrement des entités en base de données
     - Générez les fichiers de migration (représentation SQL des entités) :
-    ```bash 
-    php bin/console make:migration
-    ```
+```bash 
+php bin/console make:migration
+```
 
     - Exécutez les migrations pour appliquer les changements :
-    ```bash
-    php bin/console d:m:m
-    ```
+```bash
+php bin/console d:m:m
+```
 
 #### 3. Création des contrôleurs
 Créez un contrôleur pour gérer vos entités :
@@ -106,8 +106,8 @@ Pour créer ou modifier des entités, générez des formulaires avec la commande
 ```bash
 php bin/console make:form
 ```
-Par exemple, pour un formulaire basé sur l'entité Article, Symfony génère un fichier similaire à celui-ci :
-[Exemple de génération de formualire](src/Form/ArticleType.php).
+Par exemple, pour un formulaire basé sur l'entité Article, Symfony génère un fichier similaire à celui-ci :  
+[Exemple de génération de formualire](src/Form/ArticleType.php).  
 Il nous reste plus qu'a faire les vérification dans le controller et afficher le formulaire dans la vue twig.
 
 
