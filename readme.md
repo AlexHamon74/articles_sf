@@ -50,7 +50,6 @@ DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&cha
       php bin/console doctrine:fixtures:load
       ```
 
-
 ### Lancez le serveur 💻
 Pour lancer le serveur local et accéder à votre projet :
 ```bash
@@ -62,27 +61,27 @@ symfony serve --no-tls
 
 ### CRUD Articles 📝
 Le projet comprend deux entités principales : Article et Category.
-1. Création des entités
+#### 1. Création des entités
 Pour générer une entité, utilisez la commande suivante :
 ```bash 
 php bin/console make:entity
 ```
 Lors de la création des entités :
-- Définissez les propriétés (par exemple, title et content pour Article).
-- Ajoutez une relation OneToMany entre Article et Category.
+    - Définissez les propriétés (par exemple, title et content pour Article).
+    - Ajoutez une relation OneToMany entre Article et Category.
 
-2. Enregistrement des entités en base de données
-- Générez les fichiers de migration (représentation SQL des entités) :
-```bash 
-php bin/console make:migration
-```
+#### 2. Enregistrement des entités en base de données
+    - Générez les fichiers de migration (représentation SQL des entités) :
+    ```bash 
+    php bin/console make:migration
+    ```
 
-- Exécutez les migrations pour appliquer les changements :
-```bash
-php bin/console d:m:m
-```
+    - Exécutez les migrations pour appliquer les changements :
+    ```bash
+    php bin/console d:m:m
+    ```
 
-3. Création des contrôleurs
+#### 3. Création des contrôleurs
 Créez un contrôleur pour gérer vos entités :
 ```bash
 php bin/console make:controller nom_controller
@@ -102,7 +101,7 @@ Ceci s'effectue avec la méthode render
     }
 ```
 
-4. Gestion des formulaires
+#### 4. Gestion des formulaires
 Pour créer ou modifier des entités, générez des formulaires avec la commande suivante :
 ```bash
 php bin/console make:form
