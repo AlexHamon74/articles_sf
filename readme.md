@@ -110,19 +110,20 @@ Par exemple, pour un formulaire basé sur l'entité Article, Symfony génère un
 [Exemple de génération de formualire](src/Form/ArticleType.php).  
 Il nous reste plus qu'a faire les vérification dans le controller et afficher le formulaire dans la vue twig.
 
+---
 
 ### Upload d'image/fichier 🖼️
 [Documentation de VichUploaderBundle](https://github.com/dustin10/VichUploaderBundle/blob/master/docs/index.md).
-1. Installation
+#### 1. Installation
 ```bash
 composer require vich/uploader-bundle
 ```
 
-2. Configurez le fichier `vich_uploader.yaml` généré après l'installation. Définissez :
+#### 2. Configurez le fichier `vich_uploader.yaml` généré après l'installation. Définissez :
     - L'emplacement où les fichiers seront enregistrés.
     - Les entités qui utiliseront l'upload.
 
-3. Modifications des entités
+#### 3. Modifications des entités
 Ajoutez les champs nécessaires dans vos entités. Exemple pour une entité Article :
 ```bash
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -147,7 +148,7 @@ class Article
 }
 ```
 
-4. Modification du formualire
+#### 4. Modification du formualire
 Dans votre formulaire, modifiez le champ lié à l'image pour utiliser le FileType :
 ```bash
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -155,10 +156,12 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
     'required' => false
 ])
 ```
-5. Affichage dans twig
-Pour afficher l'image dans votre template Twig :
+#### 5. Affichage dans twig
+Pour afficher l'image dans votre template Twig :  
 `<img src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="">
 `
+
+---
 
 ### Mailer 🔗
 Exemple d'envoi d'un email de confirmation  
