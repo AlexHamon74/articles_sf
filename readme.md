@@ -211,7 +211,9 @@ access_control:
     - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
 ```
 
-#### Mot de passe oublié
+---
+
+### Mot de passe oublié
 Pour ajouter la fonctionnalité de réinitialisation de mot de passe, utilisez le bundle dédié. Consultez la documentation officielle de [ResetPasswordBundle]().
 
 ---
@@ -219,6 +221,3 @@ Pour ajouter la fonctionnalité de réinitialisation de mot de passe, utilisez l
 ## Conclusion 📌
 Ce projet est une introduction pratique à Symfony et offre un socle solide pour développer des fonctionnalités 
 avancées. N'hésitez pas à explorer les concepts de Symfony pour personnaliser et enrichir cette application. 🎉
-
-
-
