@@ -213,8 +213,8 @@ access_control:
 
 ---
 
-### Mot de passe oublié
-Pour ajouter la fonctionnalité de réinitialisation de mot de passe, utilisez le bundle dédié. Consultez la documentation officielle de [ResetPasswordBundle]().
+### Mot de passe oublié 🤔
+Pour ajouter la fonctionnalité de réinitialisation de mot de passe, utilisez le bundle dédié. Consultez la documentation officielle de [reset-password-bundle](https://github.com/SymfonyCasts/reset-password-bundle).
 
 ---
 
