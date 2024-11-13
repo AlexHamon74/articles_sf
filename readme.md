@@ -35,20 +35,21 @@ DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&cha
     - `8.0.32` : Version de votre serveur MySQL (à adapter).
 
 3. Commandes pour préparer la base de données :
-- Creér la base de données
-```bash
-php bin/console doctrine:database:create
-```
+    - Créez la base de données :
+      ```bash
+      php bin/console doctrine:database:create
+      ```
 
-- Appliquez les migrations (structure de la base de données)
-```bash
-php bin/console doctrine:migration:migrate
-```
+    - Appliquez les migrations (structure de la base de données) :
+      ```bash
+      php bin/console doctrine:migration:migrate
+      ```
 
-- Chargez les données de test
-```bash
-php bin/console doctrine:fixtures:load
-```
+    - Chargez les données de test :
+      ```bash
+      php bin/console doctrine:fixtures:load
+      ```
+
 
 ### Lancez le serveur 💻
 Pour lancer le serveur local et accéder à votre projet :
