@@ -165,13 +165,13 @@ Pour afficher l'image dans votre template Twig :
 
 ### Mailer 🔗
 Exemple d'envoi d'un email de confirmation  
-Pré-requis  
+**Pré-requis**  
 Utilisez [Mailtrap](https://mailtrap.io/) ou un autre service d'email pour vos tests.
-1. Création de l'entité et du contrôleur
+#### 1. Création de l'entité et du contrôleur
     - Créez une entité `Contact` avec les champs nécessaires (ex. : nom, email, message).
     - Créez un contrôleur pour gérer l'envoi d'emails.
 
-2. Configuration du controller
+#### 2. Configuration du controller
 Ajoutez la logique d'envoi d'email :
 ```bash
 $email = (new Email())
@@ -181,19 +181,20 @@ $email = (new Email())
     ->text("Bonjour, merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.");
 $mailer->send($email);
 ```
-3. Configuration de `messenger.yaml`
-Si l'envoi des emails est bloqué à cause de la gestion asynchrone, modifiez le fichier  
-[messenger.yaml](config/packages/messenger.yaml)
+#### 3. Configuration de `messenger.yaml`  
+Si l'envoi des emails est bloqué à cause de la gestion asynchrone, modifiez le fichier [messenger.yaml](config/packages/messenger.yaml)
+
+---
 
 ### Securité 🔒
 #### Création des fonctionnalités de base
-Enregistrement d'utilisateur
+##### 1. Enregistrement d'utilisateur
 ```bash
 php bin/console make:user
 php bin/console make:registration-form
 ```
 
-Connexion
+##### 2. Connexion
 ```bash
 php bin/console make:security:form-login
 ```
